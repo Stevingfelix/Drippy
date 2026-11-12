@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" width="160" height="42" fill="none">
+  <rect x="6" y="10" width="28" height="28" rx="8" fill="#10b981" opacity="0.14"/>
+  <path d="M14 24L20 17L26 24L20 31L14 24Z" fill="#10b981"/>
+  <text x="42" y="30" fill="#0f172a" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="0.8">CARGOWAY</text>
+</svg>
