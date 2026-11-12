@@ -826,7 +826,276 @@ h1, h2, h3, h4, h5, h6,
 .services-bar .services-bar-card:hover .thumb-icon,
 .services-bar .services-bar-card.active .thumb-body p,
 .services-bar .services-bar-card:hover .thumb-body p,
-/* Mobile Hero & Services Bar Dock Fixes (<= 991px) */
+/* Comprehensive Mobile Polish (<= 767px) */
+@media screen and (max-width: 767px) {
+  /* 1. Dedicated customer teams icon panel: 1 icon + text per row */
+  .cta .icon-set {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-top: 28px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .cta .icon-set .icon-panel {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    padding: 14px 20px !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    margin: 0 auto !important;
+    gap: 16px !important;
+  }
+
+  .cta .icon-set .icon-panel .icon {
+    margin-bottom: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .cta .icon-set .icon-panel .icon::before {
+    font-size: 38px !important;
+    color: #fb7185 !important;
+  }
+
+  .cta .icon-set .icon-panel span {
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+
+  /* 2. Manage logistics cards: vertical gap, bigger text & CTA buttons */
+  .features .row > [class*="col-"] {
+    margin-bottom: 24px !important;
+  }
+
+  .features .row > [class*="col-"]:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .features .feature-panel {
+    padding: 34px 24px !important;
+    min-height: auto !important;
+  }
+
+  .features .feature-panel .feature-content h4 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .features .feature-panel .feature-content p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .features .feature-panel .feature-content a {
+    width: 100% !important;
+    justify-content: center !important;
+    height: 48px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #e11d48, #be123c) !important;
+    border: none !important;
+    box-shadow: 0 8px 24px var(--eq-crimson-glow) !important;
+  }
+
+  /* 3. Digital freight section: center headline, paragraph and checklist */
+  .cta.cta-3 {
+    text-align: center !important;
+  }
+
+  .cta.cta-3 .heading {
+    text-align: center !important;
+  }
+
+  .cta.cta-3 .prief-set > p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .cta.cta-3 .prief-set .advantages-list,
+  .cta.cta-3 .advantages-list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 24px !important;
+    gap: 12px !important;
+  }
+
+  .cta.cta-3 .prief-set .advantages-list li,
+  .cta.cta-3 .advantages-list li {
+    justify-content: center !important;
+    text-align: center !important;
+    width: auto !important;
+  }
+
+  /* 4. Clients / Our Partners Infinite Marquee */
+  .clients-carousel .carousel.owl-carousel {
+    display: flex !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .clients-carousel .carousel.owl-carousel::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .clients-carousel .owl-stage {
+    display: flex !important;
+    width: max-content !important;
+    animation: clientsMarqueeMobile 18s linear infinite !important;
+  }
+
+  .clients-carousel .client {
+    margin: 0 20px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 5. What Our Clients Say: Remove right-edge mask/tint conflict on mobile */
+  .testimonial.testimonial-3::after {
+    display: none !important;
+  }
+
+  .testimonial.testimonial-3 {
+    padding: 70px 0 !important;
+    text-align: center !important;
+  }
+
+  .testimonial.testimonial-3 .col-lg-6:first-child,
+  .testimonial.testimonial-3 .col-lg-6:last-child {
+    border-left: none !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .testimonial.testimonial-3 .testimonial-panel .testimonial-body .testimonial-content {
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+
+  .testimonial.testimonial-3 .testimonial-panel .testimonial-body .testimonial-img {
+    position: static !important;
+    margin: 0 auto 18px !important;
+  }
+
+  .testimonial.testimonial-3 .carousel-dots .owl-dots {
+    padding-left: 0 !important;
+    justify-content: center !important;
+  }
+
+  /* 6. Blog (Read Articles): Prevent headline text from bleeding into neighboring cards */
+  .blog-grid .row > [class*="col-"] {
+    margin-bottom: 28px !important;
+  }
+
+  .blog-grid .blog-entry {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.15) !important;
+  }
+
+  .blog-grid .blog-entry .entry-title h4 {
+    font-size: 19px !important;
+    line-height: 1.4 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .blog-grid .blog-entry .entry-content {
+    padding: 24px 20px !important;
+  }
+
+  /* 7. Google Maps container centered */
+  .map.map-3 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 50px 0 !important;
+  }
+
+  .map.map-3 .container {
+    width: 100% !important;
+  }
+
+  .map.map-3 .accordion {
+    margin: 0 auto !important;
+    float: none !important;
+    max-width: 380px !important;
+  }
+
+  /* 8. Footer elements centered on mobile */
+  .vp-footer {
+    text-align: center !important;
+    padding-top: 60px !important;
+  }
+
+  .vp-footer-grid {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 36px !important;
+  }
+
+  .vp-footer-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .vp-footer-sub,
+  .vp-footer-policy {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .vp-footer-socials {
+    justify-content: center !important;
+  }
+
+  .vp-newsletter-pill {
+    margin: 0 auto !important;
+  }
+
+  .vp-footer-bottom-meta {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  .vp-footer-hours {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .vp-footer-giant {
+    text-align: center !important;
+  }
+}
+
+@keyframes clientsMarqueeMobile {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 @media screen and (max-width: 991px) {
   .slider.slider-1 .slide {
     height: auto !important;
