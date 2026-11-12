@@ -826,23 +826,27 @@ h1, h2, h3, h4, h5, h6,
 .services-bar .services-bar-card:hover .thumb-icon,
 .services-bar .services-bar-card.active .thumb-body p,
 .services-bar .services-bar-card:hover .thumb-body p,
-/* Comprehensive Mobile Polish (<= 767px) */
-@media screen and (max-width: 767px) {
+/* Comprehensive Mobile & Responsive Polish (<= 991px) */
+@media screen and (max-width: 991px) {
   /* 1. Dedicated customer teams icon panel: 1 icon + text per row */
   .cta .icon-set {
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 20px !important;
+    justify-content: center !important;
+    gap: 16px !important;
     margin-top: 28px !important;
     margin-bottom: 35px !important;
+    width: 100% !important;
   }
 
   .cta .icon-set .icon-panel {
+    display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 340px !important;
     padding: 14px 20px !important;
     border-radius: 16px !important;
     background: rgba(255, 255, 255, 0.08) !important;
@@ -855,56 +859,77 @@ h1, h2, h3, h4, h5, h6,
 
   .cta .icon-set .icon-panel .icon {
     margin-bottom: 0 !important;
+    margin-right: 0 !important;
     line-height: 1 !important;
+    flex-shrink: 0 !important;
   }
 
   .cta .icon-set .icon-panel .icon::before {
-    font-size: 38px !important;
+    font-size: 34px !important;
     color: #fb7185 !important;
   }
 
   .cta .icon-set .icon-panel span {
     text-align: left !important;
-    font-size: 16px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
+    margin-top: 0 !important;
+    color: #ffffff !important;
+    text-transform: capitalize !important;
+    font-family: 'Space Grotesk', 'Inter', sans-serif !important;
   }
 
   /* 2. Manage logistics cards: vertical gap, bigger text & CTA buttons */
-  .features .row > [class*="col-"] {
+  .features .row > [class*="col-"],
+  .features .row > div {
     margin-bottom: 24px !important;
   }
 
-  .features .row > [class*="col-"]:last-child {
+  .features .row > [class*="col-"]:last-child,
+  .features .row > div:last-child {
     margin-bottom: 0 !important;
   }
 
   .features .feature-panel {
     padding: 34px 24px !important;
     min-height: auto !important;
+    border-radius: 20px !important;
+    background: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
   }
 
   .features .feature-panel .feature-content h4 {
     font-size: 24px !important;
     line-height: 1.3 !important;
     margin-bottom: 16px !important;
+    color: #ffffff !important;
   }
 
   .features .feature-panel .feature-content p {
     font-size: 16px !important;
     line-height: 1.6 !important;
     margin-bottom: 24px !important;
+    color: rgba(248, 250, 252, 0.78) !important;
   }
 
-  .features .feature-panel .feature-content a {
+  .features .feature-panel .feature-content a,
+  .features .feature-panel:hover .feature-content a {
+    display: inline-flex !important;
     width: 100% !important;
     justify-content: center !important;
+    align-items: center !important;
     height: 48px !important;
     font-size: 15px !important;
     font-weight: 700 !important;
+    color: #ffffff !important;
     border-radius: 999px !important;
     background: linear-gradient(135deg, #e11d48, #be123c) !important;
     border: none !important;
     box-shadow: 0 8px 24px var(--eq-crimson-glow) !important;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
   }
 
   /* 3. Digital freight section: center headline, paragraph and checklist */
@@ -928,40 +953,48 @@ h1, h2, h3, h4, h5, h6,
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-top: 24px !important;
+    margin: 24px auto 0 auto !important;
+    padding: 0 !important;
     gap: 12px !important;
+    list-style: none !important;
   }
 
   .cta.cta-3 .prief-set .advantages-list li,
   .cta.cta-3 .advantages-list li {
+    display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
     width: auto !important;
   }
 
   /* 4. Clients / Our Partners Infinite Marquee */
-  .clients-carousel .carousel.owl-carousel {
-    display: flex !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: none !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-  }
-
-  .clients-carousel .carousel.owl-carousel::-webkit-scrollbar {
-    display: none !important;
+  .clients-carousel .carousel.owl-carousel,
+  .clients-carousel .owl-stage-outer {
+    overflow: hidden !important;
   }
 
   .clients-carousel .owl-stage {
     display: flex !important;
     width: max-content !important;
-    animation: clientsMarqueeMobile 18s linear infinite !important;
+    animation: clientsMarqueeMobile 20s linear infinite !important;
+    transform: none !important;
+    transition: none !important;
   }
 
-  .clients-carousel .client {
-    margin: 0 20px !important;
-    flex-shrink: 0 !important;
+  .clients-carousel .owl-item {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0 28px !important;
+  }
+
+  .clients-carousel .client img {
+    max-height: 38px !important;
+    width: auto !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.75 !important;
   }
 
   /* 5. What Our Clients Say: Remove right-edge mask/tint conflict on mobile */
@@ -1026,16 +1059,26 @@ h1, h2, h3, h4, h5, h6,
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 50px 0 !important;
+    padding: 60px 0 !important;
   }
 
-  .map.map-3 .container {
+  .map.map-3 .container,
+  .map.map-3 .row {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .map.map-3 .col-12 {
+    display: flex !important;
+    justify-content: center !important;
     width: 100% !important;
   }
 
   .map.map-3 .accordion {
     margin: 0 auto !important;
     float: none !important;
+    width: 100% !important;
     max-width: 380px !important;
   }
 
@@ -1476,8 +1519,7 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 /* Modern 3D Glass Testimonial Sections (Sitewide) */
 .testimonial.bg-overlay-theme::before,
 .testimonial.bg-overlay-theme2::before {
-  background: radial-gradient(circle at 82% 28%, rgba(225, 29, 72, 0.42), transparent 52%),
-              linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.82) 55%, rgba(136, 19, 55, 0.78) 100%) !important;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.97) 0%, rgba(15, 23, 42, 0.92) 100%) !important;
   opacity: 1 !important;
 }
 
