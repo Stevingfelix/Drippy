@@ -1100,18 +1100,50 @@ h1, h2, h3, h4, h5, h6,
   .slider.slider-1 .slide {
     height: auto !important;
     min-height: 85vh !important;
-    padding-top: 140px !important;
-    padding-bottom: 70px !important;
+    padding-top: 130px !important;
+    padding-bottom: 145px !important;
   }
 
+  /* Hero action buttons: 1 button per line with vertical spacing */
+  .slider .slide .slide-content .slide-buttons,
+  .slider-1 .slide-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 290px !important;
+    margin: 0 auto 28px auto !important;
+    text-align: center !important;
+  }
+
+  .slider .slide .slide-content .slide-buttons .btn,
+  .slider-1 .slide-buttons .btn {
+    display: block !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+    line-height: 48px !important;
+    height: 48px !important;
+    padding: 0 24px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+  }
+
+  /* Push pagination dots upwards so they sit safely above the straddling card */
   .slider.slider-1 .carousel-dots .owl-dots {
-    bottom: 24px !important;
+    bottom: 95px !important;
   }
 
-  /* Move the floating services bar container completely below the hero */
+  /* Glassmorphic Services Bar Dock: Straddles Hero & Next Container like Homepage Desktop */
   .services-bar {
-    margin-top: 30px !important;
-    margin-bottom: 20px !important;
+    position: relative !important;
+    z-index: 25 !important;
+    margin-top: -65px !important;
+    margin-bottom: 30px !important;
     padding: 0 15px !important;
   }
 
@@ -1178,11 +1210,15 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   background: transparent !important;
 }
 
+.blog.blog-grid {
+  padding-bottom: 110px !important;
+}
+
 /* Map Section Spacing & Frosted-Glass Overlay */
 .map.map-3 {
   padding-top: 140px !important;
   padding-bottom: 90px !important;
-  margin-top: 50px !important;
+  margin-top: 60px !important;
 }
 
 .map .accordion {
@@ -1512,15 +1548,15 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   position: absolute !important;
   top: 0 !important;
   right: 0 !important;
-  width: 220px !important;
+  width: 60px !important;
   height: 100% !important;
   pointer-events: none !important;
-  z-index: 10 !important;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0%, rgba(225, 29, 72, 0.42) 48%, rgba(15, 23, 42, 0.94) 100%) !important;
-  backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.65) 35%, #000 100%) !important;
-  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.65) 35%, #000 100%) !important;
+  z-index: 5 !important;
+  background: linear-gradient(90deg, transparent 0%, rgba(15, 23, 42, 0.75) 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 100%) !important;
 }
 
 .testimonial.testimonial-3 .testimonial-panel.tilt-card::before,
@@ -1835,10 +1871,13 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
-.module-language:hover .lang-list {
+.module-language:hover .lang-list,
+.module-language.module-active .lang-list,
+.module-language.active .lang-list {
   opacity: 1 !important;
   visibility: visible !important;
   transform: translateY(0) scale(1) !important;
+  max-height: 200px !important;
 }
 
 .module-language .lang-list ul {
