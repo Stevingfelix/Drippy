@@ -421,11 +421,165 @@ h1, h2, h3, h4, h5, h6,
   display: none !important;
 }
 
-@media (max-width: 991px) {
-  .header-1 .navbar .navbar-nav {
-    border-radius: 16px !important;
-    padding: 10px 14px !important;
-    margin-top: 12px !important;
+/* Mobile View Sleek 3D Glass Navbar & Offcanvas Menu Fixes (<= 991px) */
+@media screen and (max-width: 991px) {
+  .header-1 .navbar {
+    padding: 12px 18px !important;
+    background: transparent !important;
+  }
+
+  .header-1 .navbar .navbar-toggler,
+  .navbar .navbar-toggler,
+  .navbar.navbar-light .navbar-toggler {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+    margin-right: 0 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+    cursor: pointer !important;
+  }
+
+  .header-1 .navbar .navbar-toggler-icon,
+  .navbar .navbar-toggler .navbar-toggler-icon {
+    background-color: #ffffff !important;
+    width: 20px !important;
+    height: 2px !important;
+    position: relative !important;
+  }
+
+  .header-1 .navbar .navbar-toggler-icon::before,
+  .header-1 .navbar .navbar-toggler-icon::after,
+  .navbar .navbar-toggler .navbar-toggler-icon::before,
+  .navbar .navbar-toggler .navbar-toggler-icon::after {
+    background-color: #ffffff !important;
+    width: 20px !important;
+    height: 2px !important;
+  }
+
+  .navbar .navbar-collapse {
+    position: fixed !important;
+    top: 84px !important;
+    left: 14px !important;
+    right: 14px !important;
+    width: auto !important;
+    max-height: calc(100vh - 105px) !important;
+    overflow-y: auto !important;
+    background: rgba(15, 23, 42, 0.94) !important;
+    backdrop-filter: blur(28px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.35) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    padding: 20px !important;
+    z-index: 1000 !important;
+  }
+
+  .navbar .navbar-collapse .navbar-nav {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .navbar .navbar-collapse .navbar-nav > li {
+    margin: 4px 0 !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .navbar .navbar-collapse .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 11px 16px !important;
+    border-radius: 12px !important;
+    display: block !important;
+    background: transparent !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .navbar .navbar-collapse .navbar-nav > li > a:hover,
+  .navbar .navbar-collapse .navbar-nav > li.active > a {
+    color: #ffffff !important;
+    background: rgba(225, 29, 72, 0.25) !important;
+  }
+
+  .navbar .navbar-collapse .has-dropdown::after {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    width: 30px !important;
+    height: 30px !important;
+    right: 10px !important;
+    top: 8px !important;
+    z-index: 2 !important;
+  }
+
+  .navbar .navbar-collapse .has-dropdown.show::after {
+    background-color: #e11d48 !important;
+    border-color: #e11d48 !important;
+  }
+
+  .navbar .navbar-collapse .has-dropdown .dropdown-menu {
+    background: rgba(2, 6, 23, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    margin-top: 6px !important;
+  }
+
+  .navbar .navbar-collapse .has-dropdown .dropdown-menu li a {
+    color: rgba(248, 250, 252, 0.8) !important;
+    font-size: 13.5px !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  .navbar .navbar-collapse .has-dropdown .dropdown-menu li a:hover {
+    color: #ffffff !important;
+    background: rgba(225, 29, 72, 0.45) !important;
+  }
+
+  .navbar .navbar-collapse .module-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 18px !important;
+    padding-top: 18px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    width: 100% !important;
+  }
+
+  .navbar .navbar-collapse .module-container .module-contact {
+    width: 100% !important;
+  }
+
+  .navbar .navbar-collapse .module-container .module-contact .btn {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .navbar .navbar-collapse .module-container .module-language {
+    width: 100% !important;
+  }
+
+  .navbar .navbar-collapse .module-container .module-language .selected {
+    width: 100% !important;
+    justify-content: space-between !important;
   }
 }
 
@@ -634,7 +788,13 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   background: transparent !important;
 }
 
-/* Map Global Locations Frosted-Glass Overlay Panel */
+/* Map Section Spacing & Frosted-Glass Overlay */
+.map.map-3 {
+  padding-top: 140px !important;
+  padding-bottom: 90px !important;
+  margin-top: 50px !important;
+}
+
 .map .accordion {
   background: rgba(15, 23, 42, 0.78) !important;
   backdrop-filter: blur(24px) saturate(180%) !important;
@@ -954,6 +1114,7 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 /* Frosted glass backdrop blur zone at right edge for testimonials to slide into */
 .testimonial.testimonial-3 {
   position: relative !important;
+  overflow: hidden !important;
 }
 
 .testimonial.testimonial-3::after {
@@ -961,15 +1122,15 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   position: absolute !important;
   top: 0 !important;
   right: 0 !important;
-  width: 170px !important;
+  width: 220px !important;
   height: 100% !important;
   pointer-events: none !important;
-  z-index: 5 !important;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0%, rgba(136, 19, 55, 0.45) 55%, rgba(136, 19, 55, 0.95) 100%) !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.8) 45%, #000 100%) !important;
-  mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.8) 45%, #000 100%) !important;
+  z-index: 10 !important;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0%, rgba(225, 29, 72, 0.42) 48%, rgba(15, 23, 42, 0.94) 100%) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.65) 35%, #000 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.65) 35%, #000 100%) !important;
 }
 
 .testimonial.testimonial-3 .testimonial-panel.tilt-card::before,
