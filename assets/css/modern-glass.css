@@ -305,18 +305,103 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 4px !important;
 }
 
-/* Right-side Search Circle & CTA Pill */
-.header-1 .navbar .module-search .search-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(12px);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
+/* Animated Interactive Search Icon (Header) */
+.header-1 .navbar .module-search .search-icon,
+.module-search .search-icon {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 12px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: visible !important;
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1),
+              background 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease !important;
+}
+
+/* Radar pulse ripple ring around search icon */
+.header-1 .navbar .module-search .search-icon::before,
+.module-search .search-icon::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: -3px !important;
+  border-radius: 999px !important;
+  border: 2px solid rgba(225, 29, 72, 0.8) !important;
+  opacity: 0 !important;
+  transform: scale(0.9) !important;
+  pointer-events: none !important;
+  transition: all 0.4s ease !important;
+}
+
+.header-1 .navbar .module-search .search-icon:hover::before,
+.module-search .search-icon:hover::before {
+  animation: searchRadarPulse 1.4s cubic-bezier(0.24, 0, 0.38, 1) infinite !important;
+}
+
+@keyframes searchRadarPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+    border-color: rgba(251, 113, 133, 0.9);
+  }
+  70% {
+    transform: scale(1.48);
+    opacity: 0;
+    border-color: rgba(225, 29, 72, 0);
+  }
+  100% {
+    transform: scale(1.58);
+    opacity: 0;
+  }
+}
+
+/* Hover state: glowing bubble with crimson aura */
+.header-1 .navbar .module-search .search-icon:hover,
+.module-search .search-icon:hover {
+  transform: scale(1.08) rotate(6deg) !important;
+  background: rgba(225, 29, 72, 0.28) !important;
+  border-color: rgba(251, 113, 133, 0.75) !important;
+  box-shadow: 0 8px 24px var(--eq-crimson-glow), 0 0 16px rgba(225, 29, 72, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Lens spin, gleam & micro-bounce on magnifying glass icon */
+.header-1 .navbar .module-search .search-icon i,
+.module-search .search-icon i {
+  color: #ffffff !important;
+  font-size: 15px !important;
+  display: inline-block !important;
+  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1), color 0.3s ease, filter 0.3s ease !important;
+  transform-origin: center center !important;
+}
+
+.header-1 .navbar .module-search .search-icon:hover i,
+.module-search .search-icon:hover i {
+  transform: scale(1.22) rotate(-18deg) !important;
+  color: #ffffff !important;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 14px #fb7185) !important;
+}
+
+/* Active / Click tactile compression */
+.header-1 .navbar .module-search .search-icon:active,
+.module-search .search-icon:active {
+  transform: scale(0.92) rotate(0deg) !important;
+  transition: transform 0.1s ease !important;
+}
+
+.module.module-search.module-active .search-icon {
+  background: var(--eq-crimson) !important;
+  border-color: #fb7185 !important;
+  box-shadow: 0 0 24px var(--eq-crimson-glow) !important;
 }
 
 /* Scrolled Sticky State: Animated Unified Floating Frosted-Glass Pill */
@@ -727,22 +812,14 @@ h1, h2, h3, h4, h5, h6,
   display: none !important;
 }
 
-/* Hero Glass Buttons */
-.slider-1 .slide-buttons .btn-white {
+/* Hero Glass Buttons (Light-Switch Integrated) */
+.slider-1 .slide-buttons .btn-white,
+.slider-1 .slide-buttons .btn--white {
   background: rgba(255, 255, 255, 0.14) !important;
   color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.28) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 999px !important;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
-}
-
-.slider-1 .slide-buttons .btn-white:hover {
-  background: var(--eq-crimson) !important;
-  border-color: var(--eq-crimson) !important;
-  box-shadow: 0 12px 30px var(--eq-crimson-glow);
-  transform: translateY(-2px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
 }
 
 /* Glassmorphic Services Bar Dock — straddling Hero & About section, center-aligned */
@@ -2252,8 +2329,222 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   pointer-events: none;
 }
 
-/* Modern Rounded Buttons */
-.btn {
+/* ==========================================================================
+   Modern & Classic "Light-Switch" Button Hover System
+   - Animated from bottom to top like an electric light switch flicking on
+   - Specular glowing light beam leads the color transition upward
+   - Smooth tactile elevation with springy click compression
+   ========================================================================== */
+
+.btn,
+.slider .slide .slide-content .slide-buttons .btn,
+.slider-1 .slide-buttons .btn,
+.module-contact .btn,
+.actions-container .btn,
+.features .feature-panel .feature-content a,
+.cta .contact-panel .contact-types a.button,
+.testimonial.testimonial-3 .btn--bordered.btn--white,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
   border-radius: 999px !important;
+  z-index: 1 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: capitalize !important;
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.2, 0.9, 0.3, 1),
+              border-color 0.35s ease,
+              color 0.25s ease !important;
+}
+
+/* Light-Switch Sweep Beam (rises from bottom to top) */
+.btn::before,
+.slider .slide .slide-content .slide-buttons .btn::before,
+.slider-1 .slide-buttons .btn::before,
+.module-contact .btn::before,
+.actions-container .btn::before,
+.features .feature-panel .feature-content a::before,
+.cta .contact-panel .contact-types a.button::before,
+.testimonial.testimonial-3 .btn--bordered.btn--white::before,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: -1px !important;
+  border-radius: inherit !important;
+  transform: translateY(102%) translateZ(0) !important;
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  box-shadow: 0 -3px 14px rgba(255, 255, 255, 0.75), inset 0 2px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* On Hover: Light Switch Sweeps from Bottom to Top */
+.btn:hover::before,
+.slider .slide .slide-content .slide-buttons .btn:hover::before,
+.slider-1 .slide-buttons .btn:hover::before,
+.module-contact .btn:hover::before,
+.actions-container .btn:hover::before,
+.features .feature-panel .feature-content a:hover::before,
+.cta .contact-panel .contact-types a.button:hover::before,
+.testimonial.testimonial-3 .btn--bordered.btn--white:hover::before,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse:hover::before {
+  transform: translateY(0%) translateZ(0) !important;
+}
+
+/* Hover Elevation & Ambient Glow */
+.btn:hover,
+.slider .slide .slide-content .slide-buttons .btn:hover,
+.slider-1 .slide-buttons .btn:hover,
+.module-contact .btn:hover,
+.actions-container .btn:hover,
+.features .feature-panel .feature-content a:hover,
+.cta .contact-panel .contact-types a.button:hover,
+.testimonial.testimonial-3 .btn--bordered.btn--white:hover,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* Mechanical Click / Active Switch Press */
+.btn:active,
+.slider .slide .slide-content .slide-buttons .btn:active,
+.slider-1 .slide-buttons .btn:active,
+.module-contact .btn:active,
+.actions-container .btn:active,
+.features .feature-panel .feature-content a:active,
+.cta .contact-panel .contact-types a.button:active,
+.testimonial.testimonial-3 .btn--bordered.btn--white:active,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse:active {
+  transform: translateY(0) scale(0.96) !important;
+  transition: transform 0.08s ease !important;
+}
+
+/* Inner Text & Icon Micro-Lift */
+.btn > *,
+.btn span,
+.btn i,
+.features .feature-panel .feature-content a i {
+  position: relative !important;
+  z-index: 2 !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease !important;
+}
+
+.btn:hover > *,
+.btn:hover span,
+.btn:hover i {
+  transform: translateY(-1px) !important;
+}
+
+/* -------------------------------------------------------------
+   Button Variant 1: Crimson Primary (.btn--primary, .btn-primary)
+   - Base: Deep crimson gradient with subtle top glass sheen
+   - Fill: Electric bright ruby-coral beam switching upward
+   ------------------------------------------------------------- */
+.btn--primary,
+.btn-primary,
+.btn.btn--primary {
+  background: linear-gradient(135deg, #e11d48, #be123c) !important;
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px var(--eq-crimson-glow), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+}
+
+.btn--primary::before,
+.btn-primary::before,
+.btn.btn--primary::before {
+  background: linear-gradient(0deg, #9f1239 0%, #e11d48 40%, #fb7185 100%) !important;
+  box-shadow: 0 -3px 16px rgba(255, 255, 255, 0.9), inset 0 2px 0 #ffffff !important;
+}
+
+.btn--primary:hover,
+.btn-primary:hover,
+.btn.btn--primary:hover {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 14px 36px rgba(225, 29, 72, 0.65), 0 0 22px rgba(251, 113, 133, 0.45) !important;
+  color: #ffffff !important;
+}
+
+/* -------------------------------------------------------------
+   Button Variant 2: Frosted Glass / White (.btn--white, .btn-white, etc.)
+   - Base: Sleek translucent frosted glass
+   - Fill: Vivid crimson-coral light-beam powering up to pure color
+   ------------------------------------------------------------- */
+.btn--white,
+.btn-white,
+.btn--transparent,
+.btn-transparent,
+.btn--bordered,
+.btn.btn--white,
+.slider-1 .slide-buttons .btn-white,
+.slider-1 .slide-buttons .btn--white,
+.actions-container .btn,
+.testimonial.testimonial-3 .btn--bordered.btn--white,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.btn--white::before,
+.btn-white::before,
+.btn--transparent::before,
+.btn-transparent::before,
+.btn--bordered::before,
+.btn.btn--white::before,
+.slider-1 .slide-buttons .btn-white::before,
+.slider-1 .slide-buttons .btn--white::before,
+.actions-container .btn::before,
+.testimonial.testimonial-3 .btn--bordered.btn--white::before,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse::before {
+  background: linear-gradient(0deg, #be123c 0%, #e11d48 45%, #fb7185 100%) !important;
+  box-shadow: 0 -3px 16px rgba(255, 255, 255, 0.9), inset 0 2px 0 #ffffff !important;
+}
+
+.btn--white:hover,
+.btn-white:hover,
+.btn--transparent:hover,
+.btn-transparent:hover,
+.btn--bordered:hover,
+.btn.btn--white:hover,
+.slider-1 .slide-buttons .btn-white:hover,
+.slider-1 .slide-buttons .btn--white:hover,
+.actions-container .btn:hover,
+.testimonial.testimonial-3 .btn--bordered.btn--white:hover,
+.testimonial.testimonial-3 .btn--transparent.btn--inverse:hover {
+  border-color: rgba(255, 255, 255, 0.65) !important;
+  box-shadow: 0 14px 34px rgba(225, 29, 72, 0.58), 0 0 20px rgba(251, 113, 133, 0.42) !important;
+  color: #ffffff !important;
+}
+
+/* -------------------------------------------------------------
+   Button Variant 3: Feature Panel "Read More" Pills
+   ------------------------------------------------------------- */
+.features .feature-panel .feature-content a {
+  background: linear-gradient(135deg, #e11d48, #be123c) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px var(--eq-crimson-glow) !important;
+  line-height: 48px !important;
+  height: 48px !important;
+}
+
+.features .feature-panel .feature-content a::before {
+  background: linear-gradient(0deg, #9f1239 0%, #e11d48 40%, #fb7185 100%) !important;
+  box-shadow: 0 -3px 16px rgba(255, 255, 255, 0.9), inset 0 2px 0 #ffffff !important;
+}
+
+.features .feature-panel .feature-content a:hover {
+  box-shadow: 0 14px 36px rgba(225, 29, 72, 0.65), 0 0 22px rgba(251, 113, 133, 0.45) !important;
+  color: #ffffff !important;
 }
 
