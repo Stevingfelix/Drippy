@@ -523,12 +523,16 @@ h1, h2, h3, h4, h5, h6,
     align-items: center !important;
   }
 
-  .header-1 .navbar .navbar-brand {
+  .header-1 .navbar .navbar-brand,
+  .header .navbar-brand,
+  .navbar-brand {
     margin-left: 0 !important;
     padding-left: 0 !important;
   }
 
-  .header-1 .navbar .navbar-brand img {
+  .header-1 .navbar .navbar-brand img,
+  .header .navbar-brand img,
+  .navbar-brand img {
     max-height: 40px !important;
   }
 
@@ -1868,14 +1872,247 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
 
-/* Glass Quote / Contact Card */
-.cta .contact-card {
-  background: rgba(15, 23, 42, 0.74) !important;
-  backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+/* Glass Quote / Track Contact Panel & Segmented Header Tabs */
+.cta .contact-panel,
+.cta.cta-6 .contact-panel,
+.contact-panel {
+  position: relative !important;
   border-radius: 20px !important;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35) !important;
+  overflow: hidden !important;
+}
+
+.cta .contact-panel .contact-types,
+.cta.cta-6 .contact-panel .contact-types,
+.contact-panel .contact-types,
+.contact-types {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 20px 20px 0 0 !important;
+  overflow: hidden !important;
+  background: rgba(15, 23, 42, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.cta .contact-panel .contact-types .button,
+.cta.cta-6 .contact-panel .contact-types .button,
+.contact-panel .contact-types .button,
+.contact-types .button {
+  flex: 1 1 50% !important;
+  width: 50% !important;
+  max-width: 50% !important;
+  height: 64px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 0 16px !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  color: rgba(248, 250, 252, 0.72) !important;
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  text-transform: capitalize !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s ease !important;
+}
+
+.cta .contact-panel .contact-types .button:first-child,
+.cta.cta-6 .contact-panel .contact-types .button:first-child,
+.contact-panel .contact-types .button:first-child,
+.contact-types .button:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.cta .contact-panel .contact-types .button i,
+.cta.cta-6 .contact-panel .contact-types .button i,
+.contact-panel .contact-types .button i,
+.contact-types .button i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.cta .contact-panel .contact-types .button i::before,
+.cta.cta-6 .contact-panel .contact-types .button i::before,
+.contact-panel .contact-types .button i::before,
+.contact-types .button i::before {
+  font-size: 26px !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  line-height: 1 !important;
+  color: #fb7185 !important;
+  transition: transform 0.25s ease !important;
+}
+
+.cta .contact-panel .contact-types .button span,
+.cta.cta-6 .contact-panel .contact-types .button span,
+.contact-panel .contact-types .button span,
+.contact-types .button span {
+  white-space: nowrap !important;
+  letter-spacing: -0.01em !important;
+}
+
+.cta .contact-panel .contact-types .button.active,
+.cta.cta-6 .contact-panel .contact-types .button.active,
+.contact-panel .contact-types .button.active,
+.contact-types .button.active {
+  background: linear-gradient(135deg, #e11d48, #be123c) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.cta .contact-panel .contact-types .button.active i::before,
+.cta.cta-6 .contact-panel .contact-types .button.active i::before,
+.contact-panel .contact-types .button.active i::before,
+.contact-types .button.active i::before {
+  color: #ffffff !important;
+}
+
+.cta .contact-panel .contact-types .button:not(.active):hover,
+.cta.cta-6 .contact-panel .contact-types .button:not(.active):hover,
+.contact-panel .contact-types .button:not(.active):hover,
+.contact-types .button:not(.active):hover {
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: #ffffff !important;
+}
+
+.cta .contact-card,
+.cta.cta-6 .contact-panel .contact-card {
+  background: rgba(15, 23, 42, 0.88) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-top: none !important;
+  border-radius: 0 0 20px 20px !important;
+  box-shadow: none !important;
+}
+
+.cta .contact-card::after,
+.cta.cta-6 .contact-panel .contact-card::after {
+  display: none !important;
+}
+
+/* Mobile & Tablet side-by-side Contact Tabs with matching 20px roundness */
+@media screen and (max-width: 991px) {
+  .cta .contact-panel,
+  .cta.cta-6 .contact-panel,
+  .contact-panel {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    margin-top: 18px !important;
+    transform: none !important;
+  }
+
+  .cta .contact-panel .contact-types,
+  .cta.cta-6 .contact-panel .contact-types,
+  .contact-panel .contact-types,
+  .contact-types {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 20px 20px 0 0 !important;
+    overflow: hidden !important;
+    background: rgba(15, 23, 42, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .cta .contact-panel .contact-types .button,
+  .cta.cta-6 .contact-panel .contact-types .button,
+  .contact-panel .contact-types .button,
+  .contact-types .button {
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    height: 56px !important;
+    padding: 0 8px !important;
+    margin: 0 !important;
+    gap: 8px !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .cta .contact-panel .contact-types .button:first-child,
+  .cta.cta-6 .contact-panel .contact-types .button:first-child,
+  .contact-panel .contact-types .button:first-child,
+  .contact-types .button:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .cta .contact-panel .contact-types .button i::before,
+  .cta.cta-6 .contact-panel .contact-types .button i::before,
+  .contact-panel .contact-types .button i::before,
+  .contact-types .button i::before {
+    font-size: 21px !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .cta .contact-panel .contact-types .button span,
+  .cta.cta-6 .contact-panel .contact-types .button span,
+  .contact-panel .contact-types .button span,
+  .contact-types .button span {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .cta .contact-card,
+  .cta.cta-6 .contact-panel .contact-card {
+    border-radius: 0 0 20px 20px !important;
+    border-top: none !important;
+    padding: 24px 18px 32px 18px !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cta .contact-panel .contact-types .button,
+  .cta.cta-6 .contact-panel .contact-types .button,
+  .contact-panel .contact-types .button,
+  .contact-types .button {
+    height: 50px !important;
+    padding: 0 4px !important;
+    gap: 6px !important;
+  }
+
+  .cta .contact-panel .contact-types .button i::before,
+  .cta.cta-6 .contact-panel .contact-types .button i::before,
+  .contact-panel .contact-types .button i::before,
+  .contact-types .button i::before {
+    font-size: 18px !important;
+  }
+
+  .cta .contact-panel .contact-types .button span,
+  .cta.cta-6 .contact-panel .contact-types .button span,
+  .contact-panel .contact-types .button span,
+  .contact-types .button span {
+    font-size: 12px !important;
+  }
+
+  .cta .contact-card,
+  .cta.cta-6 .contact-panel .contact-card {
+    padding: 20px 14px 28px 14px !important;
+  }
 }
 
 .cta .contact-card .contact-body .form-control,
@@ -2728,7 +2965,6 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 .module-contact .btn,
 .actions-container .btn,
 .features .feature-panel .feature-content a,
-.cta .contact-panel .contact-types a.button,
 .testimonial.testimonial-3 .btn--bordered.btn--white,
 .testimonial.testimonial-3 .btn--transparent.btn--inverse {
   position: relative !important;
@@ -2747,7 +2983,6 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 .module-contact .btn::before,
 .actions-container .btn::before,
 .features .feature-panel .feature-content a::before,
-.cta .contact-panel .contact-types a.button::before,
 .testimonial.testimonial-3 .btn--bordered.btn--white::before,
 .testimonial.testimonial-3 .btn--transparent.btn--inverse::before {
   content: "" !important;
@@ -2768,7 +3003,6 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 .module-contact .btn:hover::before,
 .actions-container .btn:hover::before,
 .features .feature-panel .feature-content a:hover::before,
-.cta .contact-panel .contact-types a.button:hover::before,
 .testimonial.testimonial-3 .btn--bordered.btn--white:hover::before,
 .testimonial.testimonial-3 .btn--transparent.btn--inverse:hover::before {
   transform: translateY(0%) !important;
