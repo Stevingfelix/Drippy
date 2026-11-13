@@ -124,14 +124,66 @@
         e.stopPropagation();
     });
     
-    /* ------------------  MOBILE MENU ------------------ */
+    /* ------------------  MOBILE MENU & SCROLL LOCK ------------------ */
+
+    var savedScrollY = 0;
+    function lockPageScroll() {
+        if (!$('body').hasClass('nav-open')) {
+            savedScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+            $('html, body').addClass('nav-open');
+            $('body').css({
+                'position': 'fixed',
+                'top': -savedScrollY + 'px',
+                'width': '100%',
+                'overflow': 'hidden'
+            });
+        }
+    }
+
+    function unlockPageScroll() {
+        if ($('body').hasClass('nav-open')) {
+            $('html, body').removeClass('nav-open');
+            $('body').css({
+                'position': '',
+                'top': '',
+                'width': '',
+                'overflow': ''
+            });
+            window.scrollTo(0, savedScrollY);
+        }
+    }
+
+    $('#navbarContent').on('show.bs.collapse shown.bs.collapse', function () {
+        lockPageScroll();
+    });
+
+    $('#navbarContent').on('hide.bs.collapse hidden.bs.collapse', function () {
+        unlockPageScroll();
+    });
+
+    $('.navbar-toggler').on('click', function () {
+        setTimeout(function () {
+            if ($('#navbarContent').hasClass('show') || !$('.navbar-toggler').hasClass('collapsed')) {
+                lockPageScroll();
+            } else {
+                unlockPageScroll();
+            }
+        }, 30);
+    });
 
     var $dropToggle = $("[data-toggle='dropdown']");
     $dropToggle.on("click", function(event) {
         event.preventDefault();
         event.stopPropagation();
-        $(this).parent().siblings().removeClass("show");
-        $(this).parent().toggleClass("show");
+        var $parent = $(this).parent();
+        $parent.siblings().removeClass("show").find(".dropdown-menu").removeClass("show");
+        $parent.toggleClass("show");
+        $parent.children(".dropdown-menu").toggleClass("show");
+    });
+
+    // Ensure links inside dropdown submenus propagate and navigate cleanly
+    $(".navbar .dropdown-menu a").on("click", function(event) {
+        event.stopPropagation();
     });
 
     /*POPUP HEADER */
