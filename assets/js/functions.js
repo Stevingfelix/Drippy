@@ -29,9 +29,17 @@
     /* ------------------  LOADING SCREEN ------------------ */
 
     $(window).on("load", function() {
-        $(".preloader").fadeOut(5000);
-        $(".preloader").remove();
+        $(".preloader").fadeOut(400, function() {
+            $(this).remove();
+        });
     });
+
+    // Safety fallback: dismiss preloader quickly so user never hangs
+    setTimeout(function() {
+        $(".preloader").fadeOut(400, function() {
+            $(this).remove();
+        });
+    }, 1200);
 
     /* ------------------  Background INSERT ------------------ */
 
