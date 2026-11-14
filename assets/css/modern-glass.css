@@ -3632,15 +3632,19 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 
 /* ==========================================================================
    Shipper Help Center / Modern Glass FAQ Section
+   - Single-column, centered headline, centered FAQ items, centered bottom prompt
    ========================================================================== */
 .faq-section {
   position: relative !important;
-  padding: 110px 0 100px 0 !important;
-  background: radial-gradient(circle at 15% 30%, rgba(255, 87, 34, 0.05) 0%, transparent 60%),
-              radial-gradient(circle at 85% 70%, rgba(225, 29, 72, 0.04) 0%, transparent 60%),
-              #070b14 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
-  overflow: hidden !important;
+  padding: 90px 0 95px 0 !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.faq-section .heading {
+  text-align: center !important;
+  margin-bottom: 48px !important;
 }
 
 .faq-section .heading .heading-subtitle {
@@ -3650,118 +3654,53 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   text-transform: uppercase !important;
   letter-spacing: 1.5px !important;
   margin-bottom: 12px !important;
+  text-align: center !important;
 }
 
 .faq-section .heading .heading-title {
-  color: #ffffff !important;
+  color: #0f172a !important;
   font-family: 'Space Grotesk', sans-serif !important;
   font-size: 34px !important;
   font-weight: 700 !important;
-  line-height: 1.25 !important;
-  margin-bottom: 18px !important;
+  line-height: 1.3 !important;
+  margin: 0 auto 16px auto !important;
   letter-spacing: -0.5px !important;
+  text-align: center !important;
+  max-width: 760px !important;
 }
 
 .faq-section .heading .heading-desc {
-  color: #94a3b8 !important;
-  font-size: 15px !important;
+  color: #64748b !important;
+  font-size: 15.5px !important;
   line-height: 1.7 !important;
-  margin-bottom: 30px !important;
-}
-
-/* FAQ 24/7 Support Card on the Left */
-.faq-contact-card {
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 18px !important;
-  padding: 24px !important;
-  background: rgba(15, 23, 42, 0.75) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  border-left: 3px solid #ff5722 !important;
-  border-radius: 16px !important;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  margin-top: 10px !important;
-}
-
-.faq-contact-card .faq-card-icon {
-  width: 48px !important;
-  height: 48px !important;
-  border-radius: 12px !important;
-  background: rgba(255, 87, 34, 0.14) !important;
-  color: #ff5722 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 20px !important;
-  flex-shrink: 0 !important;
-}
-
-.faq-contact-card .faq-card-text h6 {
-  color: #ffffff !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  margin-bottom: 6px !important;
-}
-
-.faq-contact-card .faq-card-text p {
-  color: #94a3b8 !important;
-  font-size: 13.5px !important;
-  line-height: 1.55 !important;
-  margin-bottom: 14px !important;
-}
-
-.faq-contact-card .btn-faq-support {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  background: #ff5722 !important;
-  color: #ffffff !important;
-  font-size: 12.5px !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-  padding: 8px 20px !important;
-  border-radius: 9999px !important;
-  height: 38px !important;
-  line-height: 1 !important;
-  border: 1px solid #ff5722 !important;
-  transition: all 0.25s ease !important;
-  text-decoration: none !important;
-}
-
-.faq-contact-card .btn-faq-support:hover {
-  background: #000000 !important;
-  border-color: #000000 !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
+  margin: 0 auto !important;
+  max-width: 680px !important;
+  text-align: center !important;
 }
 
 /* Accordion Glass Styling */
 .accordion-glass {
   display: flex !important;
   flex-direction: column !important;
-  gap: 14px !important;
+  gap: 16px !important;
 }
 
 .accordion-glass .card {
-  background: rgba(15, 23, 42, 0.65) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 14px !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08) !important;
   overflow: hidden !important;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease !important;
+  transition: all 0.25s ease !important;
   margin-bottom: 0 !important;
+  padding: 0 !important;
 }
 
 .accordion-glass .card:hover,
 .accordion-glass .card.active-acc {
-  background: rgba(15, 23, 42, 0.88) !important;
-  border-color: rgba(255, 87, 34, 0.45) !important;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4) !important;
+  background: #0f172a !important;
+  border-color: rgba(255, 87, 34, 0.5) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16) !important;
 }
 
 .accordion-glass .card-heading {
@@ -3775,8 +3714,8 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  gap: 18px !important;
-  padding: 20px 24px !important;
+  gap: 20px !important;
+  padding: 22px 28px !important;
   color: #ffffff !important;
   font-family: 'Space Grotesk', sans-serif !important;
   font-size: 16px !important;
@@ -3785,7 +3724,19 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   text-decoration: none !important;
   cursor: pointer !important;
   user-select: none !important;
+  position: relative !important;
   transition: color 0.25s ease !important;
+}
+
+/* Suppress unwanted red plus/minus pseudo-elements from base theme style.css */
+.faq-section .accordion .card .card-heading .card-link:after,
+.faq-section .accordion .card .card-heading .card-link.collapsed:after,
+.faq-section .accordion-glass .card-link:after,
+.faq-section .card-link::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .accordion-glass .card-heading .card-link:hover {
@@ -3814,41 +3765,95 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 }
 
 .accordion-glass .card-body {
-  padding: 0 24px 22px 24px !important;
-  color: #94a3b8 !important;
+  padding: 0 28px 24px 28px !important;
+  color: #cbd5e1 !important;
   font-family: 'Roboto', sans-serif !important;
-  font-size: 14.5px !important;
-  line-height: 1.7 !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
   background: transparent !important;
   border-top: none !important;
+}
+
+/* Centered Bottom CTA Prompt */
+.faq-bottom-cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 16px 24px !important;
+  margin-top: 40px !important;
+  padding: 20px 28px !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
+  max-width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.faq-bottom-cta span {
+  color: #334155 !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+}
+
+.faq-bottom-cta .btn-faq-support {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #ff5722 !important;
+  color: #ffffff !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  padding: 8px 22px !important;
+  border-radius: 9999px !important;
+  height: 38px !important;
+  line-height: 1 !important;
+  border: 1px solid #ff5722 !important;
+  transition: all 0.25s ease !important;
+  text-decoration: none !important;
+}
+
+.faq-bottom-cta .btn-faq-support:hover {
+  background: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Mobile responsive FAQ */
 @media screen and (max-width: 991.98px) {
   .faq-section {
-    padding: 70px 0 60px 0 !important;
+    padding: 65px 0 60px 0 !important;
   }
 
   .faq-section .heading {
-    margin-bottom: 36px !important;
+    margin-bottom: 32px !important;
   }
 
   .faq-section .heading .heading-title {
     font-size: 26px !important;
   }
 
-  .faq-contact-card {
-    margin-bottom: 10px !important;
-  }
-
   .accordion-glass .card-heading .card-link {
-    padding: 16px 18px !important;
+    padding: 18px 20px !important;
     font-size: 14.5px !important;
   }
 
   .accordion-glass .card-body {
-    padding: 0 18px 18px 18px !important;
+    padding: 0 20px 20px 20px !important;
     font-size: 13.5px !important;
+  }
+
+  .faq-bottom-cta {
+    border-radius: 16px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+    padding: 18px 20px !important;
   }
 }
 
