@@ -2343,6 +2343,95 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   color: #f8fafc !important;
 }
 
+/* Centered Checkout Radio/Checkbox Options in Quote & Tracking Forms */
+.contact-card .contactForm .custom-radio-group,
+.contact-body .custom-radio-group,
+.custom-radio-group {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 10px auto 22px auto !important;
+  padding: 0 !important;
+  gap: 12px 32px !important;
+}
+
+.contact-card .contactForm .custom-radio-group .custom-control,
+.contact-body .custom-radio-group .custom-control,
+.custom-radio-group .custom-control {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding-left: 26px !important;
+  min-height: 24px !important;
+  position: relative !important;
+  cursor: pointer !important;
+}
+
+.contact-card .contactForm .custom-radio-group .custom-control label,
+.custom-radio-group .custom-control label {
+  cursor: pointer !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: #e2e8f0 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0 !important;
+  user-select: none !important;
+}
+
+.contact-card .custom-radio-group .custom-control label::before,
+.custom-radio-group .custom-control label::before {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  border-radius: 4px !important;
+  border: 2px solid rgba(255, 255, 255, 0.45) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.contact-card .custom-radio-group .custom-control .custom-control-input:checked ~ label::before,
+.custom-radio-group .custom-control .custom-control-input:checked ~ label::before {
+  border-color: #ff5722 !important;
+  background: #ff5722 !important;
+}
+
+.contact-card .custom-radio-group .custom-control .custom-control-input:checked ~ label::after,
+.custom-radio-group .custom-control .custom-control-input:checked ~ label::after {
+  background-color: #ffffff !important;
+  border-radius: 1px !important;
+  width: 6px !important;
+  height: 6px !important;
+  left: 5px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Mobile: structured 2-column centered layout */
+@media screen and (max-width: 575.98px) {
+  .contact-card .contactForm .custom-radio-group,
+  .contact-body .custom-radio-group,
+  .custom-radio-group {
+    display: grid !important;
+    grid-template-columns: repeat(2, max-content) !important;
+    justify-content: center !important;
+    align-content: center !important;
+    gap: 14px 28px !important;
+    margin: 12px auto 22px auto !important;
+    width: 100% !important;
+  }
+
+  .contact-card .contactForm .custom-radio-group .custom-control,
+  .contact-body .custom-radio-group .custom-control,
+  .custom-radio-group .custom-control {
+    margin: 0 !important;
+    width: auto !important;
+  }
+}
+
 /* Case Studies (Featured Projects) 3D Glassmorphism Cards */
 .cases-standard .owl-stage-outer {
   padding: 20px 12px 52px 12px !important;
