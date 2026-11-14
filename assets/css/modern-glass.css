@@ -3334,16 +3334,44 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   transform: translateY(-2px) !important;
 }
 
-/* Mobile responsive button & actions container */
-@media screen and (max-width: 767.98px) {
+/* Mobile & Tablet: Eliminate the 440px empty gap after Track & Trace form + Center align Managing Logistics */
+@media screen and (max-width: 991.98px) {
+  /* Eliminate the huge white gap after Track & Trace on mobile/tablet */
+  .features,
+  #features-1 {
+    padding-top: 50px !important;
+  }
+
+  /* Center alignment for Managing Logistics heading, text, button, and employee info */
+  #features-1 .heading,
+  .features .heading {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+  }
+
+  #features-1 .heading .row > div,
+  .features .heading .row > div {
+    text-align: center !important;
+  }
+
+  #features-1 .heading .heading-subtitle,
+  #features-1 .heading .heading-title,
+  #features-1 .heading .heading-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   #features-1 .actions-container,
   .features .actions-container {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 16px !important;
-    margin-top: 20px !important;
-    margin-bottom: 24px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 24px auto 28px auto !important;
+    width: 100% !important;
+    gap: 18px !important;
   }
 
   #features-1 .actions-container .btn,
@@ -3363,9 +3391,19 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
     align-items: center !important;
     justify-content: center !important;
     padding: 0 28px !important;
-    margin-right: 0 !important;
-    margin-bottom: 0 !important;
+    margin: 0 auto !important;
     font-size: 13px !important;
+    align-self: center !important;
+  }
+
+  #features-1 .actions-container .employee-info,
+  .features .actions-container .employee-info {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: left !important;
+    margin: 0 auto !important;
+    align-self: center !important;
   }
 }
 
