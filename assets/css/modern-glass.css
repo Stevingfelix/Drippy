@@ -3632,11 +3632,12 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 
 /* ==========================================================================
    Shipper Help Center / Modern Glass FAQ Section
-   - Single-column, centered headline, centered FAQ items, centered bottom prompt
+   - Single-column, wide container layout, centered headline, wide FAQ cards,
+   - Full-width generous bottom support banner with single-line button
    ========================================================================== */
 .faq-section {
   position: relative !important;
-  padding: 90px 0 95px 0 !important;
+  padding: 100px 0 105px 0 !important;
   background: #f8fafc !important;
   border-top: 1px solid #e2e8f0 !important;
   border-bottom: 1px solid #e2e8f0 !important;
@@ -3644,7 +3645,7 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 
 .faq-section .heading {
   text-align: center !important;
-  margin-bottom: 48px !important;
+  margin-bottom: 52px !important;
 }
 
 .faq-section .heading .heading-subtitle {
@@ -3660,36 +3661,40 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 .faq-section .heading .heading-title {
   color: #0f172a !important;
   font-family: 'Space Grotesk', sans-serif !important;
-  font-size: 34px !important;
+  font-size: 36px !important;
   font-weight: 700 !important;
   line-height: 1.3 !important;
   margin: 0 auto 16px auto !important;
   letter-spacing: -0.5px !important;
   text-align: center !important;
-  max-width: 760px !important;
+  max-width: 860px !important;
 }
 
 .faq-section .heading .heading-desc {
   color: #64748b !important;
-  font-size: 15.5px !important;
+  font-size: 16px !important;
   line-height: 1.7 !important;
   margin: 0 auto !important;
-  max-width: 680px !important;
+  max-width: 740px !important;
   text-align: center !important;
 }
 
-/* Accordion Glass Styling */
+/* Accordion Glass Styling - Wide & Generous Containers */
 .accordion-glass {
   display: flex !important;
   flex-direction: column !important;
-  gap: 16px !important;
+  gap: 18px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
 }
 
 .accordion-glass .card {
+  width: 100% !important;
   background: #1e293b !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 14px !important;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.07) !important;
   overflow: hidden !important;
   transition: all 0.25s ease !important;
   margin-bottom: 0 !important;
@@ -3714,11 +3719,11 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  gap: 20px !important;
-  padding: 22px 28px !important;
+  gap: 24px !important;
+  padding: 24px 32px !important;
   color: #ffffff !important;
   font-family: 'Space Grotesk', sans-serif !important;
-  font-size: 16px !important;
+  font-size: 17px !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
   text-decoration: none !important;
@@ -3747,8 +3752,8 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 32px !important;
-  height: 32px !important;
+  width: 34px !important;
+  height: 34px !important;
   border-radius: 50% !important;
   background: rgba(255, 255, 255, 0.08) !important;
   color: #94a3b8 !important;
@@ -3765,95 +3770,161 @@ section.bg-gray:not(.bg-overlay):not(.bg-theme),
 }
 
 .accordion-glass .card-body {
-  padding: 0 28px 24px 28px !important;
+  padding: 0 32px 28px 32px !important;
   color: #cbd5e1 !important;
   font-family: 'Roboto', sans-serif !important;
   font-size: 15px !important;
-  line-height: 1.75 !important;
+  line-height: 1.8 !important;
   background: transparent !important;
   border-top: none !important;
 }
 
-/* Centered Bottom CTA Prompt */
+/* Generous Full-Width Support Banner */
 .faq-bottom-cta {
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
-  flex-wrap: wrap !important;
-  gap: 16px 24px !important;
-  margin-top: 40px !important;
-  padding: 20px 28px !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: 28px !important;
+  margin-top: 48px !important;
+  padding: 24px 36px !important;
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
-  border-radius: 9999px !important;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
-  max-width: fit-content !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06) !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-.faq-bottom-cta span {
-  color: #334155 !important;
+.faq-bottom-cta-text {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+  gap: 4px !important;
+  flex: 1 1 auto !important;
+}
+
+.faq-bottom-cta-text h5 {
+  color: #0f172a !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.35 !important;
+}
+
+.faq-bottom-cta-text p {
+  color: #64748b !important;
   font-size: 14.5px !important;
-  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.5 !important;
 }
 
+/* Fixed Non-Wrapping Contact Support Button */
+.btn.btn-faq-support,
+.faq-bottom-cta .btn,
 .faq-bottom-cta .btn-faq-support {
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: fit-content !important;
+  white-space: nowrap !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  line-height: 1 !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 8px !important;
-  background: #ff5722 !important;
-  color: #ffffff !important;
-  font-size: 12.5px !important;
+  justify-content: center !important;
+  padding: 0 32px !important;
+  font-family: 'Space Grotesk', 'Roboto', sans-serif !important;
+  font-size: 13.5px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-  padding: 8px 22px !important;
-  border-radius: 9999px !important;
-  height: 38px !important;
-  line-height: 1 !important;
+  letter-spacing: 0.6px !important;
+  background: #ff5722 !important;
+  background-color: #ff5722 !important;
   border: 1px solid #ff5722 !important;
-  transition: all 0.25s ease !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.35) !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
   text-decoration: none !important;
+  transition: all 0.28s cubic-bezier(0.2, 0.9, 0.3, 1) !important;
 }
 
+.btn.btn-faq-support::before,
+.faq-bottom-cta .btn::before,
+.faq-bottom-cta .btn-faq-support::before {
+  background-color: #000000 !important;
+}
+
+.btn.btn-faq-support:hover,
+.faq-bottom-cta .btn:hover,
 .faq-bottom-cta .btn-faq-support:hover {
   background: #000000 !important;
+  background-color: #000000 !important;
   border-color: #000000 !important;
   color: #ffffff !important;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45) !important;
   transform: translateY(-2px) !important;
+}
+
+.btn.btn-faq-support i,
+.faq-bottom-cta .btn-faq-support i {
+  font-size: 13px !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  display: inline-block !important;
+  transition: transform 0.25s ease !important;
+}
+
+.btn.btn-faq-support:hover i,
+.faq-bottom-cta .btn-faq-support:hover i {
+  transform: translateX(4px) !important;
 }
 
 /* Mobile responsive FAQ */
 @media screen and (max-width: 991.98px) {
   .faq-section {
-    padding: 65px 0 60px 0 !important;
+    padding: 70px 0 65px 0 !important;
   }
 
   .faq-section .heading {
-    margin-bottom: 32px !important;
+    margin-bottom: 36px !important;
   }
 
   .faq-section .heading .heading-title {
-    font-size: 26px !important;
+    font-size: 27px !important;
   }
 
   .accordion-glass .card-heading .card-link {
-    padding: 18px 20px !important;
-    font-size: 14.5px !important;
+    padding: 18px 22px !important;
+    font-size: 15px !important;
   }
 
   .accordion-glass .card-body {
-    padding: 0 20px 20px 20px !important;
-    font-size: 13.5px !important;
+    padding: 0 22px 22px 22px !important;
+    font-size: 14px !important;
   }
 
   .faq-bottom-cta {
-    border-radius: 16px !important;
     flex-direction: column !important;
+    align-items: center !important;
     text-align: center !important;
-    gap: 12px !important;
-    padding: 18px 20px !important;
+    gap: 16px !important;
+    padding: 22px 20px !important;
+    border-radius: 18px !important;
+  }
+
+  .faq-bottom-cta-text {
+    text-align: center !important;
+  }
+
+  .btn.btn-faq-support,
+  .faq-bottom-cta .btn-faq-support {
+    width: auto !important;
+    min-width: 200px !important;
   }
 }
 
