@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" width="160" height="42" fill="none">
-  <rect x="6" y="10" width="28" height="28" rx="8" fill="#e11d48" opacity="0.14"/>
-  <path d="M14 24L20 17L26 24L20 31L14 24Z" fill="#e11d48"/>
-  <text x="42" y="30" fill="#0f172a" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="0.8">NORDICPORT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" width="180" height="40" fill="none">
+  <!-- Kuehne+Nagel Anchor Emblem -->
+  <g transform="translate(4, 4)">
+    <circle cx="18" cy="18" r="17" fill="#003366" opacity="0.08"/>
+    <path d="M18 6V26M11 14H25M11 22C11 26 14.5 28.5 18 28.5C21.5 28.5 25 26 25 22M18 6A2.5 2.5 0 1 0 18 11A2.5 2.5 0 1 0 18 6Z" stroke="#003366" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="46" y="27" fill="#0f172a" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0.8">KUEHNE+NAGEL</text>
 </svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" width="160" height="40" fill="none">
+  <!-- Bolloré Emblem -->
+  <g transform="translate(6, 7)">
+    <circle cx="15" cy="15" r="14" stroke="#004b93" stroke-width="2.2"/>
+    <path d="M5 15C5 9 10 5 15 5C19 5 23 8 24 12" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="15" cy="15" r="4.5" fill="#004b93"/>
+  </g>
+  <text x="44" y="27" fill="#0f172a" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="15" font-weight="700" letter-spacing="0.8">BOLLORÉ</text>
+</svg>

@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" width="160" height="42" fill="none">
-  <rect x="6" y="10" width="28" height="28" rx="8" fill="#10b981" opacity="0.14"/>
-  <path d="M14 24L20 17L26 24L20 31L14 24Z" fill="#10b981"/>
-  <text x="42" y="30" fill="#0f172a" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="0.8">CARGOWAY</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 44" width="150" height="40" fill="none">
+  <!-- Geodis Star Emblem -->
+  <g transform="translate(6, 7)">
+    <rect x="3" y="3" width="24" height="24" rx="6" fill="#502c84"/>
+    <path d="M15 7L18 12L23 15L18 18L15 23L12 18L7 15L12 12Z" fill="#ff5722"/>
+  </g>
+  <text x="40" y="27" fill="#1e1b4b" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="16.5" font-weight="800" letter-spacing="1">GEODIS</text>
 </svg>

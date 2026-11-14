@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" width="160" height="40" fill="none">
+  <!-- Prologis Emblem -->
+  <g transform="translate(6, 7)">
+    <rect x="3" y="3" width="24" height="24" rx="5" fill="#008752" opacity="0.12"/>
+    <path d="M15 6L23 15L15 24L7 15Z" stroke="#008752" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M15 11L19 15L15 19L11 15Z" fill="#008752"/>
+  </g>
+  <text x="40" y="27" fill="#003b22" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="15" font-weight="800" letter-spacing="1.2">PROLOGIS</text>
+</svg>

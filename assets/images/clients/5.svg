@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" width="160" height="42" fill="none">
-  <rect x="6" y="10" width="28" height="28" rx="8" fill="#f59e0b" opacity="0.14"/>
-  <path d="M14 24L20 17L26 24L20 31L14 24Z" fill="#f59e0b"/>
-  <text x="42" y="30" fill="#0f172a" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="0.8">TRANSGLOBAL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" width="180" height="40" fill="none">
+  <!-- C.H. Robinson Compass Logo -->
+  <g transform="translate(6, 7)">
+    <circle cx="15" cy="15" r="14" stroke="#0c2340" stroke-width="2" fill="#00a3e0" fill-opacity="0.1"/>
+    <path d="M15 4L18 13H24L19 17L21 24L15 20L9 24L11 17L6 13H12L15 4Z" fill="#0c2340"/>
+  </g>
+  <text x="44" y="27" fill="#0c2340" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="0.5">C.H. ROBINSON</text>
 </svg>

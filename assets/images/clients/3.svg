@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" width="160" height="42" fill="none">
-  <rect x="6" y="10" width="28" height="28" rx="8" fill="#0284c7" opacity="0.14"/>
-  <path d="M14 24L20 17L26 24L20 31L14 24Z" fill="#0284c7"/>
-  <text x="42" y="30" fill="#0f172a" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="0.8">OCEANIX</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" width="160" height="40" fill="none">
+  <!-- CMA CGM Wing Emblem -->
+  <g transform="translate(6, 7)">
+    <path d="M4 25C14 19 22 10 26 3C22 12 14 18 4 21Z" fill="#e11d48"/>
+    <path d="M10 27C20 21 28 12 32 5C28 14 20 20 10 23Z" fill="#002b66"/>
+  </g>
+  <text x="46" y="27" fill="#002b66" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="16.5" font-weight="800" font-style="italic" letter-spacing="0.5">CMA CGM</text>
 </svg>

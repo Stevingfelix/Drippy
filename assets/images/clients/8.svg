@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 44" width="170" height="40" fill="none">
+  <!-- Sinotrans Emblem -->
+  <g transform="translate(6, 8)">
+    <path d="M2 14L14 3L26 14L14 25Z" fill="#d92523" opacity="0.12"/>
+    <path d="M6 14L14 7L22 14L14 21Z" stroke="#d92523" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="14" cy="14" r="3" fill="#d92523"/>
+  </g>
+  <text x="42" y="27" fill="#0f172a" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="15" font-weight="800" letter-spacing="1">SINOTRANS</text>
+</svg>
